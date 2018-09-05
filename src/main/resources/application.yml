@@ -50,7 +50,6 @@ spring:
     static_files: /static/(.*\.html)
     upload: /static/(.*\.html)
 
-
     #testando git
 
 
