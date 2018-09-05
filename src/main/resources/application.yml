@@ -1,0 +1,44 @@
+spring:
+
+  tomcat:
+    max-wait: 20000
+    max-active: 50
+    max-idle: 20
+    min-idle: 15
+
+  datasource:
+    url: jdbc:postgresql://localhost/desafio
+    username: postgres
+    password: admin
+    pool-size: 30
+
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: create-drop
+      dialect: org.hibernate.dialect.PostgreSQL9Dialect
+      format_sql: true
+      id:
+        new_generator_mappings: false
+
+  security:
+    jwt:
+      token:
+        secret-key: secret-key
+        expire-length: 36000
+
+  MessageRestController:
+    user: Authenticates user and returns its JWT token.
+    home: Creates user and returns its JWT token
+    message: Returns specific user by username
+
+  UsuarioRestController:
+    users: Deletes specific user by username
+
+  handlers:
+  - url: /(.*\.html)
+    mime_type: text/html
+    static_files: /static/(.*\.html)
+    upload: /static/(.*\.html)
+
+
