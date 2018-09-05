@@ -35,6 +35,16 @@ spring:
   UsuarioRestController:
     users: Deletes specific user by username
 
+
+  data:
+    mongodb:
+      host: cluster0-x0evx.gcp.mongodb.net
+      port:
+      uri:
+      database: messages
+      username: admin
+      password: admin
+
   handlers:
   - url: /(.*\.html)
     mime_type: text/html
