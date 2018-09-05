@@ -51,3 +51,6 @@ spring:
     upload: /static/(.*\.html)
 
 
+    #testando git
+
+
